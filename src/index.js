@@ -8,6 +8,9 @@ const app = express();
 const server = new ApolloServer({
     typeDefs,
     resolvers,
+    resolvers,
+    introspection: true,
+    playground: true, 
     context: ({ req }) => {
       // Attach the request object to the context
       return { req };
